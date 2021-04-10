@@ -9,12 +9,21 @@
 </head>
 
 <body>
-  <div class="nav">
+  <div class="nav" id="my-nav">
     <ul>
       <li><a href="index.html">/Home</a></li>
       <li><a href="music.html">/Music</a></li>
       <li><a href="contact.html">/Contact</a></li>
+      <a href="javascript:void(0);" class="nav-icon" onclick="openNav()">
+        <i class="fa fa-bars"></i>
+      </a>
     </ul>
+  </div>
+  <div class="small-nav" id="small-nav">
+    <ul>
+      <li><a href="index.html">/Home</a></li>
+      <li><a href="music.html">/Music</a></li>
+      <li><a href="contact.html">/Contact</a></li>
   </div>
   <div class="logo">
     <img src="13-XA-gif.gif" />
@@ -22,10 +31,12 @@
   <div class="blog">
     <div id="post">
       <h1>
-        The Void
+        // The Void
       </h1>
       <p>
         13-XA's first single, The Void, was released on <a href="https://soundcloud.com/13-xa/the-void" target="_blank">SoundCloud</a> on April 1st.
+        <br>//Stream on <a href="https://open.spotify.com/track/6DXL2LZCZmAqXDzViDrEGJ?si=C8nzbiR-Qk6Fnp9wl3el6g" target="_blank">Spotify</a>
+        <br>//Listen on <a href="https://www.youtube.com/watch?v=AE9h7YJSoQ8&ab_channel=13-XA" target="_blank">YouTube</a>
       </p>
       <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1020722917&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/13-xa" title="13-XA" target="_blank" style="color: #cccccc; text-decoration: none;">13-XA</a> · <a href="https://soundcloud.com/13-xa/the-void" title="The Void" target="_blank" style="color: #cccccc; text-decoration: none;">The Void</a></div>
     </div>
@@ -40,5 +51,7 @@
       2020. 13-XA.
     </h3>
   </footer>
+
+  <script src="javascript.js"></script>
 </body>
 </html>
