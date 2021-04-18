@@ -1,57 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>13-XA // home</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-</head>
+<html lang='en'>
+  <head>
+    <title>// 13-XA //</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='styles.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  </head>
 
-<body>
-  <div class="nav" id="my-nav">
-    <ul>
-      <li><a href="index.html">/Home</a></li>
-      <li><a href="music.html">/Music</a></li>
-      <li><a href="contact.html">/Contact</a></li>
-    </ul>
-  </div>
-  <a href="javascript:void(0);" class="nav-icon" onclick="openNav()">
-    <i class="fa fa-bars"></i>
-  </a>
-  <div class="small-nav" id="small-nav">
-    <ul>
-      <li><a href="index.html">/Home</a></li>
-      <li><a href="music.html">/Music</a></li>
-      <li><a href="contact.html">/Contact</a></li>
-  </div>
-  <div class="logo">
-    <img src="13-XA-gif.gif" />
-  </div>
-  <div class="blog">
-    <div id="post">
-      <h1>
-        The Void
-      </h1>
-      <p>
-        13-XA's first single, The Void, was released on <a href="https://soundcloud.com/13-xa/the-void" target="_blank">SoundCloud</a> on April 1st.
-        <br>//Stream on <a href="https://open.spotify.com/track/6DXL2LZCZmAqXDzViDrEGJ?si=C8nzbiR-Qk6Fnp9wl3el6g" target="_blank">Spotify</a>
-        <br>//Listen on <a href="https://www.youtube.com/watch?v=AE9h7YJSoQ8&ab_channel=13-XA" target="_blank">YouTube</a>
-      </p>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1020722917&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/13-xa" title="13-XA" target="_blank" style="color: #cccccc; text-decoration: none;">13-XA</a> · <a href="https://soundcloud.com/13-xa/the-void" title="The Void" target="_blank" style="color: #cccccc; text-decoration: none;">The Void</a></div>
+  <body>
+    <div class="loading-page" id="lp">
+    <div id="loading-info">
+      <h3>// _INITIALIZING_ //</h3>
+      <h4 id="info-1">Generating identification number...</h4>
+      <h4 id="info-2">Requesting access...</h4>
+      <h4 id="info-3">Data opening...</h4>
+      <br />
+      <h4 id="info-4">Complete...</h4>
+    </div>
+    <div id="loading-page">
+      <div id="inner-bar">0%</div>
     </div>
   </div>
+  <div id="fs">
+    <h3 id="fs-info">// _SYSTEM_FAILURE_ //</h3>
+  </div>
+    <div id="page">
+      <div class="logo" id="logo">
+        <img src="13-XA-gif.gif" />
+      </div>
+      <div class="page-content">
+        <div id="inner">
+          <a id='i-1' href="https://open.spotify.com/artist/1gh8GVv9z7oW1LhCfNvwEL?si=piHnTmY6Rrm7Hbh0lz5k1w" target="_blank"><i class="fab fa-spotify"></i></a>
+          <a id='i-2' href="https://soundcloud.com/13-xa"><i class="fab fa-soundcloud"></i></a>
+          <a id='i-3' href="https://www.youtube.com/channel/UCgrX75TmKxnzPCMAoBN56XQ" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a id='i-4' href="https://www.instagram.com/13_xa_music/" target="_blank"<i class="fab fa-instagram"></i></a>
+          <p>Business: 13xamusic@gmail.com</p>
+        </div>
+      </div>
+    </div>
 
+    <script>
+    //document loaded
+      document.addEventListener('DOMContentLoaded', function(event) {
+        move();
+      });
+
+    //animated loading bar
+      var i = 0;
+      var sf = false;
+      function move() {
+        if(i == 0) {
+          i = 1;
+          var elem = document.getElementById('inner-bar');
+          var width = 1;
+          var t = 30.0;
+          var id = setInterval(frame, t);
+          function frame() {
+            if(width == 25) {
+              document.getElementById('info-1').style.display="block";
+              document.getElementById('info-1').style.animation = 'fadeIn 1s ease';
+            }
+            if(width == 50) {
+              document.getElementById('info-2').style.display = "block";
+              document.getElementById('info-2').style.animation = 'fadeIn 1s ease';
+            }
+            if(width == 75) {
+              document.getElementById('info-3').style.display = "block";
+              document.getElementById('info-3').style.animation = 'fadeIn 1s ease';
+            }
+            if(width >= 100) {
+              clearInterval(id);
+              i = 0;
+
+              //document.getElementById('lp').style.display = 'none';
+              //document.getElementById('page').style.display = 'block';
+
+              //document.getElementById('page').style.animation = 'fadeIn 1s ease';
+              setTimeout(function(){
+                document.getElementById('info-4').style.display = 'block';
+                document.getElementById('info-4').style.animation = 'fadeIn 1s ease';
+                document.getElementById('info-4').innerHTML = 'Complete...Welcome Back User: X' + (Math.floor(Math.random() * 1000));
+              }, 1000);
+              setTimeout(function() {
+                document.getElementById('lp').style.display = 'none';
+                document.getElementById('fs').style.display = 'block';
+                flash();
+                setTimeout(loadPage, 6000);
+              }, 3000);
+            } else {
+              width++;
+              elem.style.width = width + '%';
+              elem.innerHTML = 'Loading...';
+            }
+          }
+        }
+      }
+      function flash() {
+        var f = document.getElementById('fs-info');
+        setInterval(function() {
+          f.style.display = (f.style.display == 'none' ? '' : 'none');
+        }, 1000);
+      }
+      function loadPage() {
+        document.getElementById('fs').style.display = 'none';
+        document.getElementById('page').style.display = 'block';
+        document.getElementById('page').style.animation = 'fadeIn 1s ease';
+      }
+    </script>
+
+  </body>
   <footer>
-    <a href="https://soundcloud.com/13-xa" target="_blank"><i class="fab fa-soundcloud"></i></a>
-    <a href="https://www.youtube.com/channel/UCgrX75TmKxnzPCMAoBN56XQ" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://twitter.com/13XA_Music" target="_blank"><i class="fab fa-twitter"></i></a>
-    <h3>
-      <i class="far fa-copyright"></i>
-      2020. 13-XA.
-    </h3>
+    <h3><i class="far fa-copyright"></i> <i class="far fa-registered"></i> 13-XA.</h3>
   </footer>
-
-  <script src="javascript.js"></script>
-</body>
 </html>
