@@ -23,7 +23,7 @@ body {
 
 .loading-page {
   margin: auto;
-  width:40%;
+  width:50%;
   animation: fadeIn 1s ease;
   padding-top: 20px;
 }
@@ -164,5 +164,51 @@ footer {
   }
   100% {
     width:100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .loading-page {
+    margin: auto;
+    width: 70%;
+  }
+  .page-content #inner {
+    margin: auto;
+    width: 70%;
+  }
+  .page-content #inner p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .loading-page {
+    margin: auto;
+    width: 80%;
+  }
+  .page-content #inner {
+    margin: auto;
+    width: 80%;
+  }
+  .page-content #inner p {
+    font-size: 12px;
+  }
+  #loading-info h4 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .loading-page {
+    margin: auto;
+    width:90%;
+  }
+  .page-content #inner {
+    margin: auto;
+    width: 90%;
+  }
+  #loading-page {
+    margin: 0;
+  }
+  .page-content #inner p {
+    font-size: 16px;
   }
 }
