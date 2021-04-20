@@ -25,6 +25,7 @@ body {
   margin: auto;
   width:40%;
   animation: fadeIn 1s ease;
+  padding-top: 20px;
 }
 #loading-page {
   text-align: center;
