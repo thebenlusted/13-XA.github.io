@@ -117,6 +117,9 @@ body {
   margin:30px;
   transition: color 0.3s ease;
 }
+.page-content i {
+  padding-top: 16px;
+}
 .page-content #inner #i-1:hover {
   color:#1DB954;
 }
@@ -179,6 +182,10 @@ footer {
   .page-content #inner p {
     font-size: 15px;
   }
+  .page-content i {
+    font-size: 38px;
+    padding-top: 16px;
+  }
 }
 @media screen and (max-width: 750px) {
   .loading-page {
@@ -193,7 +200,14 @@ footer {
     font-size: 12px;
   }
   #loading-info h4 {
-    font-size: 14px;
+    font-size: 12px;
+  }
+  #loading-info h3 {
+    font-size: 15px;
+  }
+  .page-content i {
+    font-size: 32px;
+    padding-top: 16px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -209,6 +223,10 @@ footer {
     margin: 0;
   }
   .page-content #inner p {
-    font-size: 16px;
+    font-size: 15px;
+  }
+  .page-content i {
+    font-size: 26px;
+    padding-top: 16px;
   }
 }
