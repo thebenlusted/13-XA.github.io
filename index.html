@@ -9,108 +9,29 @@
   </head>
 
   <body>
-    <div class="loading-page" id="lp">
-    <div id="loading-info">
-      <h3>// _INITIALIZING_ //</h3>
-      <h4 id="info-1">Generating identification number...</h4>
-      <h4 id="info-2">Requesting access...</h4>
-      <h4 id="info-3">Data opening...</h4>
-      <br />
-      <h4 id="info-4">Complete...</h4>
-    </div>
-    <div id="loading-page">
-      <div id="inner-bar">0%</div>
-    </div>
-  </div>
-  <div id="fs">
-    <h3 id="fs-info">// _SYSTEM_FAILURE_ //</h3>
-  </div>
-    <div id="page">
-      <div class="logo" id="logo">
-        <img src="13-XA-gif.gif" />
-      </div>
-      <div class="page-content">
-        <div id="inner">
-          <a id='i-1' href="https://open.spotify.com/artist/1gh8GVv9z7oW1LhCfNvwEL?si=piHnTmY6Rrm7Hbh0lz5k1w" target="_blank"><i class="fab fa-spotify"></i></a>
-          <a id='i-2' href="https://soundcloud.com/13-xa"><i class="fab fa-soundcloud"></i></a>
-          <a id='i-3' href="https://www.youtube.com/channel/UCgrX75TmKxnzPCMAoBN56XQ" target="_blank"><i class="fab fa-youtube"></i></a>
-          <a id='i-4' href="https://www.instagram.com/13_xa_music/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <p>Business: 13xamusic@gmail.com</p>
-        </div>
+    <div id="main-content">
+      <img src="untitled.png" />
+      <h1>D I S C O V E R Y .</h1>
+      <p>Stream Here:</p>
+      <div id="links">
+        <ul>
+        <li><a href= ""><i class="fab fa-soundcloud"></i></a></li>
+        <li><a href=""><i class="fab fa-spotify"></i></a></li>
+        <li><a href=""><i class="fab fa-apple"></i></a></li>
+        <li><a href=""><i class="fab fa-bandcamp"></i></a></li>
+        </ul>
       </div>
     </div>
-
-    <script>
-    //document loaded
-      document.addEventListener('DOMContentLoaded', function(event) {
-        move();
-      });
-
-    //animated loading bar
-      var i = 0;
-      var sf = false;
-      function move() {
-        if(i == 0) {
-          i = 1;
-          var elem = document.getElementById('inner-bar');
-          var width = 1;
-          var t = 30.0;
-          var id = setInterval(frame, t);
-          function frame() {
-            if(width == 25) {
-              document.getElementById('info-1').style.display="block";
-              document.getElementById('info-1').style.animation = 'fadeIn 1s ease';
-            }
-            if(width == 50) {
-              document.getElementById('info-2').style.display = "block";
-              document.getElementById('info-2').style.animation = 'fadeIn 1s ease';
-            }
-            if(width == 75) {
-              document.getElementById('info-3').style.display = "block";
-              document.getElementById('info-3').style.animation = 'fadeIn 1s ease';
-            }
-            if(width >= 100) {
-              clearInterval(id);
-              i = 0;
-
-              //document.getElementById('lp').style.display = 'none';
-              //document.getElementById('page').style.display = 'block';
-
-              //document.getElementById('page').style.animation = 'fadeIn 1s ease';
-              setTimeout(function(){
-                document.getElementById('info-4').style.display = 'block';
-                document.getElementById('info-4').style.animation = 'fadeIn 1s ease';
-                document.getElementById('info-4').innerHTML = 'Complete...Welcome Back User: X' + (Math.floor(Math.random() * 1000));
-              }, 1000);
-              setTimeout(function() {
-                document.getElementById('lp').style.display = 'none';
-                document.getElementById('fs').style.display = 'block';
-                flash();
-                setTimeout(loadPage, 6000);
-              }, 3000);
-            } else {
-              width++;
-              elem.style.width = width + '%';
-              elem.innerHTML = 'Loading...';
-            }
-          }
-        }
-      }
-      function flash() {
-        var f = document.getElementById('fs-info');
-        setInterval(function() {
-          f.style.display = (f.style.display == 'none' ? '' : 'none');
-        }, 1000);
-      }
-      function loadPage() {
-        document.getElementById('fs').style.display = 'none';
-        document.getElementById('page').style.display = 'block';
-        document.getElementById('page').style.animation = 'fadeIn 1s ease';
-      }
-    </script>
-
+    <div id="footer">
+      <h3><i class="far fa-copyright"></i> 13-XA // 2021.</h3>
+      <ul>
+        <li><a href="https://twitter.com/13XA_Music" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/13.XA.Music" target="_blank"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/13_xa_music/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.tiktok.com/@13xa_music?" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCgrX75TmKxnzPCMAoBN56XQ" target="_blank"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
   </body>
-  <footer>
-    <h3><i class="far fa-copyright"></i> <i class="far fa-registered"></i> 13-XA.</h3>
-  </footer>
+
 </html>

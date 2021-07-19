@@ -1,232 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap');
 @font-face {
     font-family: Retro;
     src: url(retro_computer_personal_use.ttf);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin:0;
-  padding: 0;
-}
-html {
-  background-color: #0d0d0d;
-}
 body {
-  background-color: #0d0d0d;
-  text-align: center;
-}
-
-.loading-page {
-  margin: auto;
-  width:50%;
-  animation: fadeIn 1s ease;
-  padding-top: 20px;
-}
-#loading-page {
-  text-align: center;
-  margin: auto;
-  margin-top: 20px;
-  border: white 1px solid;
-}
-#inner-bar {
-  width:1%;
-  height: 20px;
-  background-color: white;
-  text-align: left;
-  font-family:'Open sans',sans-serif;
-}
-#info-1, #info-2, #info-3, #info-4 {
-  display:none;
-  margin-top: 16px;
-}
-#loading-info {
-  width:100%;
-  height:300px;
-  font-family: 'Retro';
-  border:white 1px solid;
-}
-#loading-info h3 {
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  padding: 36px;
-}
-#loading-info h4 {
-  text-align: left;
-  color: white;
-  font-size: 16px;
-  padding: 4px;
-  margin: 0;
-}
-
-#fs {
+  background-color: black;
+  margin:0;
+  padding:0;
+  overflow: hidden;
   color:white;
-  font-family: 'Retro';
-  display:none;
-  width:100%;
-  height:100%;
-  text-align: center;
-  position: absolute;
-}
-#fs h3 {
-  position: relative;
-  top:50%;
-  transform: translateY(-50%);
 }
 
-
-#page {
-  display: none;
-}
-
-.logo {
-  width:100%;
-  padding:60px 0 60px 0;
-}
-.logo img {
-  width:50%;
-}
-.logo h3 {
-  font-family: 'Retro';
-  color:white;
-  font-size:1.4vw;
-  padding:8px;
-}
-
-.page-content {
-  width:100%;
-  padding-bottom: 40px;
-}
-.page-content #inner {
+#main-content {
   width:60%;
-  margin: auto;
-  border: solid 3px white;
+  text-align: center;
+  margin:auto;
+  position: relative;
 
-  color:white;
-  font-size: 4vw;
+  animation:fadeIn 3s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation:fadeIn 3s;
+}
+#main-content p {
+  font-family: Lexend;
+  font-size: 24px;
+  margin:0;
+  padding:0;
+  margin-top:64px;
+}
+#main-content h1 {
+  font-family: Lexend;
+  margin-top: -420px;
+  font-size:42px;
+}
+#main-content img {
+  width:100%;
+  margin:0;
+  padding:0;
+  margin-top:-200px;
 }
 
-.page-content #inner a {
+#main-content #links ul {
+  list-style-type: none;
+  padding:0;
+  overflow: hidden;
+  padding-top:16px;
+}
+#main-content #links li {
+  padding:8px;
+  margin:0 32px 0 32px;
+  display:inline-block;
+  font-size: 30px;
+  position: relative;
+}
+#main-content #links li:after {
+  content:'';
+  position: absolute;
+  width:100%;
+  transform:scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left:0;
+  background-color:white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#main-content #links li:hover:after {
+  transform:scaleX(1);
+  transform-origin: bottom left;
+}
+#main-content #links li a {
   color:white;
   text-decoration: none;
-  margin:30px;
-  transition: color 0.3s ease;
-}
-.page-content i {
-  padding-top: 16px;
-}
-.page-content #inner #i-1:hover {
-  color:#1DB954;
-}
-.page-content #inner #i-2:hover {
-  color:#FE5000;
-}
-.page-content #inner #i-3:hover {
-  color: #FF0000;
-}
-.page-content #inner #i-4:hover {
-  color: #E1306C;
-}
-.page-content #inner p {
-  font-family: 'Open sans', sans-serif;
-  font-size:1.2vw;
-  padding:20px;
 }
 
-footer {
-  font-family: 'Open sans', sans-serif;
+#footer {
   color:white;
+  font-family: Lexend;
+  text-align: center;
   position: fixed;
   bottom:0;
-  font-weight: 300;
-  font-size: 12px;
   width:100%;
-  height:auto;
-  opacity: 0.1;
+  font-weight: 400;
+  color:rgba(255,255,255,0.1);
+
+  animation:fadeIn 3s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation:fadeIn 3s;
 }
+#footer ul {
+  list-style-type: none;
+  padding:0;
+  overflow: hidden;
+}
+#footer li {
+  padding: 8px;
+  margin:0 8px 0 8px;
+  display:inline-block;
+  font-size:16px;
+  position: relative;
+}
+#footer li:after {
+  content:'';
+  position: absolute;
+  width:100%;
+  transform:scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left:0;
+  background-color:white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#footer li:hover:after {
+  transform:scaleX(1);
+  transform-origin: bottom left;
+}
+#footer a {
+  color:white;
+  text-decoration: none;
+}
+
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    margin-top:16px;
-  }
-  100% {
-    opacity: 1;
-    margin-top:0px;
-  }
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
-
-@keyframes growWidth {
-  0% {
-    width:0%;
-  }
-  100% {
-    width:100%;
-  }
+@-moz-keyframes fadeIn {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
-
-@media screen and (max-width: 900px) {
-  .loading-page {
-    margin: auto;
-    width: 70%;
-  }
-  .page-content #inner {
-    margin: auto;
-    width: 70%;
-  }
-  .page-content #inner p {
-    font-size: 15px;
-  }
-  .page-content i {
-    font-size: 38px;
-    padding-top: 16px;
-  }
+@-o-keyframes fadeIn {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
-@media screen and (max-width: 750px) {
-  .loading-page {
-    margin: auto;
-    width: 80%;
-  }
-  .page-content #inner {
-    margin: auto;
-    width: 80%;
-  }
-  .page-content #inner p {
-    font-size: 12px;
-  }
-  #loading-info h4 {
-    font-size: 12px;
-  }
-  #loading-info h3 {
-    font-size: 15px;
-  }
-  .page-content i {
-    font-size: 32px;
-    padding-top: 16px;
-  }
+@-ms-keyframes fadeIn {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
-@media screen and (max-width: 600px) {
-  .loading-page {
-    margin: auto;
-    width:90%;
-  }
-  .page-content #inner {
-    margin: auto;
-    width: 96%;
-  }
-  #loading-page {
-    margin: 0;
-  }
-  .page-content #inner p {
-    font-size: 15px;
-  }
-  .page-content i {
-    font-size: 26px;
-    padding-top: 16px;
-  }
+@-webkit-keyframes fadeIn {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
